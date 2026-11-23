@@ -11,12 +11,24 @@ namespace CaffeineCitrix64
 {
     internal static class Program
     {
+        private static global::System.Threading.Mutex? _mutex;
+
         [STAThread]
         private static void Main()
         {
+            const string mutexName = "Global\\CaffeineCitrix64_SingleInstanceMutex";
+            _mutex = new global::System.Threading.Mutex(true, mutexName, out bool createdNew);
+
+            if (!createdNew)
+            {
+                return;
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TrayAppContext());
+
+            GC.KeepAlive(_mutex);
         }
     }
 

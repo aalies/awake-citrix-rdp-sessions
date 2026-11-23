@@ -14,10 +14,12 @@ Fertige Release-Binaries (`win-x64`) stehen im [GitHub Releases Bereich](https:/
 - **64-Bit statt veraltetes 32-Bit-COM:** Klassische `WFICALib`-Ansätze scheitern in aktuellen 64-Bit-Umgebungen häufig (`REGDB_E_CLASSNOTREG` / `0x80040154`) oder erfordern Registry-/COM-Eingriffe. Unterstützt neben Citrix Workspace auch **Microsoft Windows App / Remote Desktop** (`msrdc`, `remotedesktop`, `desktopviewer`).
 - **Kein Stören bei aktiver Arbeit in Citrix (Per-Session-Prüfung):** Wenn eine bestimmte Citrix- oder Remote-Session im Vordergrund aktiv ist und darin Benutzereingaben (`GetLastInputInfo`) erkannt wurden, wird der Refresh **nur für diese aktive Session** übersprungen – parallele Hintergrund-Sessions erhalten weiterhin ihre Keep-Awake-Impulse, und Chat-Eingaben (z. B. in MS Teams) verlieren nicht den Fokus.
 - **Kein `WM_ACTIVATE`-Fokusraub:** Impulse werden gezielt über `PostMessage` an Haupt- und sichtbare Kindfenster gesendet, ohne künstliches Re-Aktivieren des Fensters.
+- **Keine Registry Einträge nötig** Es wird kein Registry Eintrag benötigt und das Tool kommt komplett ohne Installation oder Admin Berechtigungen aus.
 
 ## Funktionen
 
 - **System-Tray-Icon** mit Statusanzeige (Aktiv / Pausiert) und Linksklick zum Umschalten.
+- **Einzelinstanz-Schutz (Single-Instance):** Garantiert über einen globalen `Mutex`, dass das Programm immer nur einmal gleichzeitig läuft.
 - **Zwei wählbare Impuls-Modi** über das Tray-Menü:
   - **Maus-Impuls (`WM_MOUSEMOVE` an `(1,1)`):** Standardmodus, schonend für Texteingaben und Remote-Apps.
   - **F15-Taste (`VK_F15` ohne `WM_ACTIVATE`):** Alternative, falls `WM_MOUSEMOVE` von der Sitzung ignoriert wird.

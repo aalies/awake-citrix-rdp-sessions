@@ -13,7 +13,7 @@ Provide a lightweight, reliable 64-bit keep-awake utility (`win-x64`, `.NET 8`, 
 
 ## 2\. Current Architecture ([`Main.cs`](Main.cs:1))
 
-- **Entry Point & UI Thread:** `Program.Main()` launches a Windows Forms `ApplicationContext` (`TrayAppContext`) managing the `NotifyIcon`, `ContextMenuStrip`, and `System.Windows.Forms.Timer` (default interval: `30_000` ms).  
+- **Entry Point & UI Thread:** `Program.Main()` uses a global named `Mutex` (`Global\CaffeineCitrix64_SingleInstanceMutex`) to guarantee single-instance execution, then launches a Windows Forms `ApplicationContext` (`TrayAppContext`) managing the `NotifyIcon`, `ContextMenuStrip`, and `System.Windows.Forms.Timer` (default interval: `30_000` ms).  
 - **Active Usage Protection (Per-Session Foreground Check):**  
   - Uses `GetLastInputInfo` (`user32.dll`) to calculate local user idle time (`Environment.TickCount - dwTime`).  
   - Uses `GetForegroundWindow` + `GetWindowThreadProcessId` to check whether a target process (`wfica`, `cdviewer`, `citrix`, or configured `TargetKeywords`) currently owns the foreground window.  
