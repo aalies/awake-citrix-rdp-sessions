@@ -1,5 +1,0 @@
-C:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.exe
-C:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.dll
-C:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.deps.json
-C:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.runtimeconfig.json
-C:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.pdb
