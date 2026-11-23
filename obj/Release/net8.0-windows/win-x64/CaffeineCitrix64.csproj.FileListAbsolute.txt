@@ -1,0 +1,28 @@
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.exe
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.deps.json
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.runtimeconfig.json
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.dll
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.pdb
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.GeneratedMSBuildEditorConfig.editorconfig
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.AssemblyInfoInputs.cache
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.AssemblyInfo.cs
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.csproj.CoreCompileInputs.cache
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.dll
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\refint\CaffeineCitrix64.dll
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.pdb
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.genruntimeconfig.cache
+D:\Temp\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\ref\CaffeineCitrix64.dll
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.exe
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.deps.json
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.runtimeconfig.json
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.dll
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\CaffeineCitrix64.pdb
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.AssemblyInfoInputs.cache
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.AssemblyInfo.cs
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.csproj.CoreCompileInputs.cache
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.dll
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\refint\CaffeineCitrix64.dll
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.pdb
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\CaffeineCitrix64.genruntimeconfig.cache
+c:\Users\helld\OneDrive - SAS\DEVEL\git\CaffeineCSharp64bit\obj\Release\net8.0-windows\win-x64\ref\CaffeineCitrix64.dll

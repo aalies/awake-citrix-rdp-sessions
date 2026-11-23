@@ -1,0 +1,5 @@
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.exe
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.dll
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.deps.json
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.runtimeconfig.json
+D:\Temp\CaffeineCSharp64bit\bin\Release\net8.0-windows\win-x64\publish\CaffeineCitrix64.pdb
