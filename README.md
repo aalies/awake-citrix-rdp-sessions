@@ -21,8 +21,8 @@ Fertige Release-Binaries (`win-x64`) stehen im [GitHub Releases Bereich](https:/
 - **System-Tray-Icon** mit Statusanzeige (Aktiv / Pausiert) und Linksklick zum Umschalten.
 - **Einzelinstanz-Schutz (Single-Instance):** Garantiert über einen globalen `Mutex`, dass das Programm immer nur einmal gleichzeitig läuft.
 - **Zwei wählbare Impuls-Modi** über das Tray-Menü:
-  - **Maus-Impuls (`WM_MOUSEMOVE` an `(1,1)`):** Standardmodus, schonend für Texteingaben und Remote-Apps.
-  - **F15-Taste (`VK_F15` ohne `WM_ACTIVATE`):** Alternative, falls `WM_MOUSEMOVE` von der Sitzung ignoriert wird.
+  - **F15-Taste (`VK_F15` ohne `WM_ACTIVATE`):** **Standardmodus** (`_useMouseMoveOnly = false`), hochzuverlässig bei Citrix VDA und RDP/Windows App, da ein virtueller Funktionstastendruck (`WM_KEYDOWN` / `WM_KEYUP`) vom Remote-System als echte Benutzeraktivität gewertet wird.
+  - **Maus-Impuls (`WM_MOUSEMOVE` an `(1,1)`):** **Alternativer Modus** (`_useMouseMoveOnly = true`), sendet eine einzelne `WM_MOUSEMOVE`-Nachricht an Koordinate `(1, 1)` im Fenster (schonend, aber manche Sitzungen ignorieren statische Mausbewegungen).
 - **Konfigurierbare Ziel-Keywörter (`TargetKeywords`)** in [`caffeine.properties`](bin/Release/net8.0-windows/win-x64/caffeine.properties:1) (Standard: `wfica,cdviewer,citrix,msrdc,remotedesktop,desktopviewer`) mit automatischem Ausschluss des eigenen Prozesses (`Environment.ProcessId`), um Selbstansprachen bei geöffnetem Debug-Log-Fenster zu verhindern.
 - **Live-Debug-Logfenster** (`Debug-Log anzeigen`) sowie persistente Logdatei `caffeine_debug.log` im Ausgabeverzeichnis.
 - **Soforttest** (`Jetzt sofort testen`) zum Prüfen der erkannten Fenster und Sendevorgänge.

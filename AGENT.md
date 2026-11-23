@@ -22,7 +22,9 @@ Provide a lightweight, reliable 64-bit keep-awake utility (`win-x64`, `.NET 8`, 
 - **Target Discovery & Background Pulse (`OnTick`, `FindCitrixProcesses`, `GetChildWindows`, `SendNonIntrusivePulse`):**  
   - Enumerates running processes matching configurable `TargetKeywords` (default: `wfica`, `cdviewer`, `citrix`, `msrdc`, `remotedesktop`, `desktopviewer`) with a non-zero `MainWindowHandle`, explicitly excluding `Environment.ProcessId`.  
   - Discovers visible child windows via `EnumChildWindows` + `IsWindowVisible`.  
-  - Dispatches non-intrusive messages via `PostMessage` using either `WM_MOUSEMOVE` at `(1, 1)` (default) or `VK_F15` (`WM_KEYDOWN` / `WM_KEYUP` without `WM_ACTIVATE`).  
+  - Dispatches non-intrusive messages via `PostMessage` using either:
+    - `VK_F15` (`WM_KEYDOWN` / `WM_KEYUP` without `WM_ACTIVATE`, **default**, `_useMouseMoveOnly = false`): Highly reliable across Citrix VDA and RDP/Windows App because virtual key presses are strictly interpreted as user activity.
+    - `WM_MOUSEMOVE` at `(1, 1)` (alternative mode, `_useMouseMoveOnly = true`): Sends a single mouse movement message to the top-left corner of the window without moving the physical cursor.  
 - **Logging (`DebugLogForm` + `caffeine_debug.log`):**  
   - Appends timestamped entries thread-safely via `InvokeRequired` / `BeginInvoke`.  
   - Intercepts `FormClosing` (`CloseReason.UserClosing`) to hide the log window instead of terminating the tray application.
