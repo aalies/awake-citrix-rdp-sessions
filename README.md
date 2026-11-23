@@ -1,6 +1,13 @@
-# CaffeineCitrix64
+# CaffeineCitrix64 (awake-citrix-rdp-sessions)
 
-64-Bit-Keep-Awake-Utility (`.NET 8` / Windows Forms) für die **Citrix Workspace App** (`wfica32` / `CDViewer`) mit System-Tray-Steuerung, Aktivitäts-/Vordergrundprüfung und Live-Debug-Log.
+[![GitHub Release](https://img.shields.io/github/v/release/aalies/awake-citrix-rdp-sessions)](https://github.com/aalies/awake-citrix-rdp-sessions/releases/latest)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/aalies/awake-citrix-rdp-sessions/blob/master/LICENSE.md)
+
+64-Bit-Keep-Awake-Utility (`.NET 8` / Windows Forms) für die **Citrix Workspace App** (`wfica32` / `CDViewer`) sowie **Windows App / RDP** mit System-Tray-Steuerung, Aktivitäts-/Vordergrundprüfung und Live-Debug-Log.
+
+## Download & Binaries
+
+Fertige Release-Binaries (`win-x64`) stehen im [GitHub Releases Bereich](https://github.com/aalies/awake-citrix-rdp-sessions/releases/latest) zum Download bereit (`awake-citrix-rdp-sessions-win-x64.zip`).
 
 ## Warum dieses Tool?
 
