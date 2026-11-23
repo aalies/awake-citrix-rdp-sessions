@@ -1,0 +1,12 @@
+# .NET / Visual Studio build artifacts & caches
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.log
+*.zip
+publish/
