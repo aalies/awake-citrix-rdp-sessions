@@ -21,7 +21,7 @@ Provide a lightweight, reliable 64-bit keep-awake utility (`win-x64`, `.NET 8`, 
   - Skips sending pulses **per session**: if a specific target process is in the foreground and `idleMs < ActiveInCitrixThresholdMs` (`45_000` ms), the refresh for that active session is skipped, while parallel background sessions continue receiving keep-awake pulses.  
 - **Target Discovery & Background Pulse (`OnTick`, `FindCitrixProcesses`, `GetChildWindows`, `SendNonIntrusivePulse`):**  
   - Enumerates running processes matching configurable `TargetKeywords` (default: `wfica`, `cdviewer`, `citrix`, `msrdc`, `remotedesktop`, `desktopviewer`) with a non-zero `MainWindowHandle`, explicitly excluding `Environment.ProcessId`.  
-  - Discovers visible child windows via `EnumChildWindows` + `IsWindowVisible`.  
+  - Discovers visible child windows via `EnumChildWindows` + `IsWindowVisible` (skipped for Windows App / RDP processes like `msrdc`, `remotedesktop`, `desktopviewer` to prevent audio beeps/sounds in input capture windows).  
   - Dispatches non-intrusive messages via `PostMessage` using either:
     - `VK_F15` (`WM_KEYDOWN` / `WM_KEYUP` without `WM_ACTIVATE`, **default**, `_useMouseMoveOnly = false`): Highly reliable across Citrix VDA and RDP/Windows App because virtual key presses are strictly interpreted as user activity.
     - `WM_MOUSEMOVE` at `(1, 1)` (alternative mode, `_useMouseMoveOnly = true`): Sends a single mouse movement message to the top-left corner of the window without moving the physical cursor.  

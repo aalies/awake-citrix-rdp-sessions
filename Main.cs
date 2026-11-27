@@ -301,13 +301,24 @@ namespace CaffeineCitrix64
                     bool okMain = SendNonIntrusivePulse(mainHwnd);
                     Log($" -> Hauptfenster: {(okMain ? "GESENDET" : $"FEHLER ({Marshal.GetLastWin32Error()})")}");
 
-                    var children = GetChildWindows(mainHwnd);
-                    foreach (IntPtr child in children)
+                    bool isMsrdcOrRdp = proc.ProcessName.Contains("msrdc", StringComparison.OrdinalIgnoreCase) ||
+                                       proc.ProcessName.Contains("remotedesktop", StringComparison.OrdinalIgnoreCase) ||
+                                       proc.ProcessName.Contains("desktopviewer", StringComparison.OrdinalIgnoreCase);
+
+                    if (!isMsrdcOrRdp)
                     {
-                        string cClass = GetWindowClass(child);
-                        string cTitle = GetWindowTitle(child);
-                        bool okChild = SendNonIntrusivePulse(child);
-                        Log($" -> Kindfenster 0x{child.ToInt64():X} ['{cClass}' / '{cTitle}']: {(okChild ? "GESENDET" : $"FEHLER ({Marshal.GetLastWin32Error()})")}");
+                        var children = GetChildWindows(mainHwnd);
+                        foreach (IntPtr child in children)
+                        {
+                            string cClass = GetWindowClass(child);
+                            string cTitle = GetWindowTitle(child);
+                            bool okChild = SendNonIntrusivePulse(child);
+                            Log($" -> Kindfenster 0x{child.ToInt64():X} ['{cClass}' / '{cTitle}']: {(okChild ? "GESENDET" : $"FEHLER ({Marshal.GetLastWin32Error()})")}");
+                        }
+                    }
+                    else
+                    {
+                        Log(" -> Kindfenster-Scan für Windows App / RDP übersprungen (verhindert Sound/Beeps durch Input Capture Windows).");
                     }
                 }
                 catch (Exception ex)
